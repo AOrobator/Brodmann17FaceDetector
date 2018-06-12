@@ -1,12 +1,11 @@
 /*
- * example.cpp
+ * tinybd17example.cpp
  *
- *  Created on: May 16, 2018
- *      Author: Brodmann17
+ *  Created on: May 14, 2018
+ *      Author: netanell
  */
 
 #include "libbrodmann17.h"
-
 #include <string>
 #include <unistd.h>
 #include <opencv2/opencv.hpp>
@@ -21,6 +20,7 @@ using namespace cv;
 int imageExample(string image_filename) {
 
 	// Prepare Detector
+
 	Init();
 	void* detector = CreateDetector();
 
@@ -54,9 +54,14 @@ int imageExample(string image_filename) {
 
 		// Draw rectangle
 		rectangle(im, pt1, pt2, Scalar(0, 0, 255), 2);
+
+		printf(" %f,%f,%f,%f \r\n", detections[i*PARAMS_PER_DETECTION],
+				detections[i*PARAMS_PER_DETECTION+1],
+				detections[i*PARAMS_PER_DETECTION] + detections[i*PARAMS_PER_DETECTION+2] - 1,
+				detections[i*PARAMS_PER_DETECTION+1] + detections[i*PARAMS_PER_DETECTION+3] - 1);
 	}
-	imshow("Output", im);
-	int key = waitKey(0);
+	//imshow("Output", im);
+	//int key = waitKey(0);
 
 	// Clean Up
 	DestroyDetector(detector);
