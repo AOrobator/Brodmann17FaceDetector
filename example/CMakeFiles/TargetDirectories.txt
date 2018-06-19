@@ -1,0 +1,3 @@
+/home/pi/Brodmann17FaceDetector/example/CMakeFiles/rebuild_cache.dir
+/home/pi/Brodmann17FaceDetector/example/CMakeFiles/edit_cache.dir
+/home/pi/Brodmann17FaceDetector/example/CMakeFiles/example.dir

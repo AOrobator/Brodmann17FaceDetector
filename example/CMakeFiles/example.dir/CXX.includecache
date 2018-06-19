@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/libbrodmann17.h
+string.h
+-
+
+/home/pi/Brodmann17FaceDetector/example/example.cpp
+libbrodmann17.h
+/home/pi/Brodmann17FaceDetector/example/libbrodmann17.h
+string
+-
+unistd.h
+-
+opencv2/opencv.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+chrono
+-
+stdlib.h
+-
+stdio.h
+-
+dirent.h
+-
+
